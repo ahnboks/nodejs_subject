@@ -1,4 +1,4 @@
-//1. 서버 연결(3000)
+//1. 서버 연결(3000) 모듈
 const express = require('express');
 const http = require('http');
 const app=express();
