@@ -18,18 +18,17 @@
           });
 	}
 
+	//set한 데이터 문단 visible 여부
   function toggle(name){
     console.log('toggle 들어옴'+name+'Data');
+		 var class_names = ['.nodejsData','.bootData','.javascriptData'];
 
-      if($('.nodejsData').css('display')=='block'){
-        $('.nodejsData').css('display','none');
-      }
-      if($('.bootData').css('display')=='block'){
-        $('.bootData').css('display','none');
-      }
-      if($('.javascriptData').css('display')=='block'){
-        $('.javascriptData').css('display','none');
-      }
+		 //toggle 처리 전 기존에 block되어있던 문단은 none
+		 for (var i=0; i<3; i++) {
+			 if ($(class_names[i]).css('display')=='block') {
+		 	 $(class_names[i]).css('display','none');
+		  }
+		 }
 
     var displayStatus = $(name+'Data').css('display');
     console.log(displayStatus);
